@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>点击Div，显示其innerHTML</title>
+	<style type="text/css">
+		body {
+			font: 12px/1.5 Tahoma;
+		}
+		#outer {
+			width: 500px;
+			margin: 0 auto;
+		}
+		#outer div {
+			border: 2px solid #ccc;
+			padding: 10px;
+			margin-bottom: 10px;
+			text-indent: 2em;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function() {
+			var oDiv = document.getElementById("outer").getElementsByTagName("div");
+			for (var i = 0; i < oDiv.length; i++) {
+				oDiv[i].onclick = function() {
+					alert(this.innerHTML);
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="outer">
+		<div><strong>华夏经纬网2月18日讯</strong>：据台湾媒体报道，代表争取连任的国民党主席洪秀柱发言的游颢17日表示，周刊报导的民调数据与一般认知有明显落差。洪办委托民调公司所做民调显示，洪秀柱在党主席民调排序中居于领先。</div>
+		<div>2017年春节档，唐季礼与成龙合作的合家欢电影《功夫瑜伽》获得了票房和口碑的双丰收。《功夫瑜伽》的导演、成龙的多年搭档唐季礼与中国传媒大学教授索亚斌对谈《功夫瑜伽》。</div>
+		<div>最近郑爽吸烟的事件火了一把，作为公众人物确实要注意形象，再说对身体也不是很好，很多人都能理解她吸烟，因为工作压力大。但是这么一回应吸烟事件，就有网友表态了。我们先来看她是如何回应的吧！</div>
+	</div>
+</body>
+</html>
